@@ -456,9 +456,14 @@ font-size: 16px;
     max-width: 264px;
 }
 .footer-list{
-display: flex;
-gap: 120px;
+    margin-right: 120px;
 }
+.footer-div {
+    
+    display: flex;
+        align-items: baseline;
+}
+
 .footer-social-page{
 color: var(--WHITE, #FFF);
 font-weight: 500;
