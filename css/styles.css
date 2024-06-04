@@ -467,6 +467,8 @@ font-size: 16px;
 .footer-social-page{
 color: var(--WHITE, #FFF);
 font-weight: 500;
+font-size: 16px;
+letter-spacing: 0.02em;
 margin-bottom: 16px;
 }
 
@@ -487,9 +489,10 @@ margin-bottom: 16px;
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.footer-socials-link:hover {
+.footer-socials-link:hover, .footer-socials-link:focus {
 
     background-color: var(--GREEN, #31D0AA);
 }
