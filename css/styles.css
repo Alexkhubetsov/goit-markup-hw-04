@@ -115,18 +115,35 @@ color: #2e2f42;
 }
 
 .header-nav-item {
-        color: #2e2f42;
+        
+        padding: 24px 0;
+}
+.header-nav-link{
+    color: #2e2f42;
         font-weight: 500;
         font-size: 16px;
         line-height: 1.5;
         letter-spacing: 0.02em;
-        padding: 24px 0;
+        position: relative;
+        transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+            transition-property: color;
 }
-.header-nav-item a {
-padding: 24px 0;
+
+.current::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 4px;
+    background-color: #404bbf;
+    border-radius: 2px;
+    position: absolute;
+    top: 42px;
+    left: 0;
 }
-.nav:hover,
-.nav:focus {
+
+
+.header-nav-link:hover,
+.header-nav-link:focus {
     color: #404bbf;
 }
 
@@ -160,6 +177,13 @@ padding: 24px 0;
 .hero {
     background-color: #2E2F42;
     padding: 188px 0;
+    background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url('../images/people-office.jpg');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    
+    
+        position: relative;
 }
 
 .hero .container {
@@ -210,6 +234,18 @@ padding: 24px 0;
     display: flex;
     gap: 24px;
 }
+.properties-icon{
+width: 264px;
+height: 112px;
+flex-shrink: 0;
+border-radius: 4px;
+    border: 1px solid var(--LIGHT-SLATE, #8E8F99);
+    background: var(--CLOUD, #F4F4FD);
+    display: flex;
+        justify-content: center;
+        align-items: center;
+}
+
 .title {
     font-size: 20px;
     font-weight: 500;
@@ -219,6 +255,7 @@ padding: 24px 0;
 }
 .properties-list-item .title {
     margin-bottom: 8px;
+    margin-top: 8px;
 }
 .properties-list-item {
     display: flex;
@@ -274,6 +311,7 @@ padding: 24px 0;
     align-items: center;
     padding: 32px 0;
 }
+
 .team-list-item-div .title {
     margin-bottom: 8px;
     text-align: center;
@@ -281,7 +319,32 @@ padding: 24px 0;
 }
 .team-list-item-div .page {
     text-align: center;
+    margin-bottom: 8px;
 }
+.socials
+{
+    display: flex;
+gap: 24px;
+}
+.socials-item {
+    
+}
+.socials-link {
+    width: 40px;
+    height: 40px;
+    fill: var(--CLOUD, #F4F4FD);
+    background-color: var(--IRIS, #4D5AE5);
+    /* border: 1px solid rgb(21, 11, 11); */
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.socials-link:hover {
+
+    background-color: var(--OCEAN, #404BBF);
+}
+
 /* #endregion Team */
 
 
@@ -311,6 +374,39 @@ padding: 24px 0;
         background: var(--WHITE, #FFF);
 }
 
+.overlay-wraper {
+    position: relative;
+    overflow: hidden;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+font-size: 16px;
+    line-height: 24px;
+    /* 150% */
+    letter-spacing: 0.32px;
+    padding: 40px 32px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+
+    color: var(--CLOUD, #F4F4FD);
+    backdrop-filter: blur(15px);
+    background: var(--IRIS, #4D5AE5);
+    transform: translateY(100%);
+    transition: 1000ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition-property: transform;
+
+}
+.portfolio-list-item:hover .overlay {
+    transform: translateY(0%);
+}
+.portfolio-list-item:hover{
+
+        box-shadow: 0px 1px 6px 0px rgba(46, 47, 66, 0.08), 0px 1px 1px 0px rgba(46, 47, 66, 0.16), 0px 2px 1px 0px rgba(46, 47, 66, 0.08);
+}
 .portfolio-list-item-div {
     display: flex;
         height: 120px;
@@ -344,6 +440,40 @@ padding: 24px 0;
     color: #F4F4FD;
     max-width: 264px;
 }
+.footer-list{
+display: flex;
+gap: 120px;
+}
+.footer-social-page{
+color: var(--WHITE, #FFF);
+font-weight: 500;
+margin-bottom: 16px;
+}
+
+.footer-socials {
+    display: flex;
+    gap: 16px;
+}
+
+.footer-socials-item {}
+
+.footer-socials-link {
+    width: 40px;
+    height: 40px;
+    fill: var(--CLOUD, #F4F4FD);
+    background-color: var(--IRIS, #4D5AE5);
+    /* border: 1px solid rgb(21, 11, 11); */
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-socials-link:hover {
+
+    background-color: var(--GREEN, #31D0AA);
+}
+
 .logo-footer {
     text-transform: uppercase;
         color: #4d5ae5;
